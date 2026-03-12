@@ -47,17 +47,29 @@
 
         /* 4 colors * 10 seconds each = 40s total animation duration */
         @keyframes bg-color-change {
-            0%, 25% {
-                background-color: #050505; /* Black/Dark Gray */
+
+            0%,
+            25% {
+                background-color: #050505;
+                /* Black/Dark Gray */
             }
-            25.01%, 50% {
-                background-color: #0a0f1c; /* Very Dark Blue */
+
+            25.01%,
+            50% {
+                background-color: #0a0f1c;
+                /* Very Dark Blue */
             }
-            50.01%, 75% {
-                background-color: #120a1c; /* Very Dark Purple */
+
+            50.01%,
+            75% {
+                background-color: #120a1c;
+                /* Very Dark Purple */
             }
-            75.01%, 100% {
-                background-color: #051412; /* Very Dark Teal */
+
+            75.01%,
+            100% {
+                background-color: #051412;
+                /* Very Dark Teal */
             }
         }
 
@@ -87,8 +99,13 @@
         }
 
         @keyframes pulse-bg {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.05); }
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.05);
+            }
         }
 
         .shape {
@@ -220,7 +237,7 @@
             position: relative;
             z-index: 2;
         }
-        
+
         .hero-image-wrapper {
             flex: 1;
             display: flex;
@@ -264,6 +281,7 @@
             0% {
                 border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
             }
+
             100% {
                 border-radius: 60% 40% 30% 70% / 60% 50% 40% 60%;
             }
@@ -602,7 +620,7 @@
                 grid-template-columns: 1fr;
                 gap: 3rem;
             }
-            
+
             .hero-wrapper {
                 flex-direction: column-reverse;
                 text-align: center;
@@ -610,18 +628,18 @@
                 padding-top: 6rem;
                 padding-bottom: 2rem;
             }
-            
+
             .hero-content {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
             }
-            
+
             .hero-desc {
                 margin-left: auto;
                 margin-right: auto;
             }
-            
+
             .btn-group {
                 justify-content: center;
             }
@@ -683,8 +701,10 @@
                 <div class="hero-content reveal active">
                     <div class="badge">DevOps Student @ LionTech Canada</div>
                     <h1>Hi, I'm <span>Anderson</span> <br />Abi-Ache Shoh Chama</h1>
-                    <p class="hero-desc">I am an aspiring DevOps Engineer and Software Developer. I specialize in automating
-                        infrastructure, deploying robust CI/CD pipelines, and building scalable bridging architectures.</p>
+                    <p class="hero-desc">I am an aspiring DevOps Engineer and Software Developer. I specialize in
+                        automating
+                        infrastructure, deploying robust CI/CD pipelines, and building scalable bridging architectures.
+                    </p>
                     <div class="btn-group">
                         <a href="#projects" class="btn btn-primary">
                             View Projects
@@ -700,7 +720,8 @@
                 <div class="hero-image-wrapper reveal active">
                     <div class="hero-image-container">
                         <div class="hero-image-backdrop"></div>
-                        <img src="profile.jpg" alt="Anderson Chama" class="hero-image" onerror="this.src='https://github.com/shoh96.png'; this.onerror=null;">
+                        <img src="profile.jpg" alt="Anderson Chama" class="hero-image"
+                            onerror="this.src='https://github.com/shoh96.png'; this.onerror=null;">
                     </div>
                 </div>
             </div>
@@ -735,11 +756,13 @@
                         <div class="skill-tag">Prometheus & Grafana</div>
                         <div class="skill-tag">Git Version Control</div>
                     </div>
-                    
+
                     <h3 style="font-size: 2rem; margin-top: 3rem; margin-bottom: 2rem; font-weight: 600;">Languages</h3>
                     <div class="skills-container">
-                        <div class="skill-tag" style="border-color: rgba(79, 172, 254, 0.4);">English <span style="color: var(--accent-1); font-weight: 600;">(C1 Advanced)</span></div>
-                        <div class="skill-tag" style="border-color: rgba(79, 172, 254, 0.4);">French <span style="color: var(--accent-1); font-weight: 600;">(Intermediate)</span></div>
+                        <div class="skill-tag" style="border-color: rgba(79, 172, 254, 0.4);">English <span
+                                style="color: var(--accent-1); font-weight: 600;">(C1 - Advanced)</span></div>
+                        <div class="skill-tag" style="border-color: rgba(79, 172, 254, 0.4);">French <span
+                                style="color: var(--accent-1); font-weight: 600;">(B1 - Intermediate)</span></div>
                     </div>
                 </div>
             </div>
@@ -808,8 +831,10 @@
             <div class="glass-card contact-section">
                 <h2 style="font-size: 3rem; margin-bottom: 1.5rem; font-weight: 800;">Let's <span>Connect</span></h2>
                 <p style="color: var(--text-muted); font-size: 1.2rem; margin-bottom: 2rem;">
-                    I am currently seeking full-time roles, internships, and dynamic employment opportunities. Let's build robust, scalable infrastructure together.
-                    <br><strong style="color: var(--text-main); font-weight: 500;">I am highly adaptable, open to remote opportunities globally, and fully willing to relocate for the right role.</strong>
+                    I am currently seeking full-time roles, internships, and dynamic employment opportunities. Let's
+                    build robust, scalable infrastructure together.
+                    <br><strong style="color: var(--text-main); font-weight: 500;">I am highly adaptable, open to remote
+                        opportunities globally, and fully willing to relocate for the right role.</strong>
                 </p>
 
                 <div class="contact-info">
@@ -866,13 +891,13 @@
 
             window.addEventListener('scroll', exposeElements);
             exposeElements(); // Trigger on initial load
-            
+
             /* Live Wallpaper Particle Network */
             const canvas = document.getElementById('canvas-bg');
             if (canvas) {
                 const ctx = canvas.getContext('2d');
                 let w, h, particles;
-                
+
                 function init() {
                     w = canvas.width = window.innerWidth;
                     h = canvas.height = window.innerHeight;
@@ -888,31 +913,31 @@
                         });
                     }
                 }
-                
+
                 function draw() {
                     ctx.clearRect(0, 0, w, h);
                     ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
-                    
+
                     for (let i = 0; i < particles.length; i++) {
                         let p = particles[i];
-                        
+
                         p.x += p.vx;
                         p.y += p.vy;
-                        
+
                         // Bounce off edges smoothly
                         if (p.x < 0 || p.x > w) p.vx *= -1;
                         if (p.y < 0 || p.y > h) p.vy *= -1;
-                        
+
                         ctx.beginPath();
                         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
                         ctx.fill();
-                        
+
                         for (let j = i + 1; j < particles.length; j++) {
                             let p2 = particles[j];
                             let dx = p.x - p2.x;
                             let dy = p.y - p2.y;
                             let dist = Math.sqrt(dx * dx + dy * dy);
-                            
+
                             if (dist < 150) {
                                 ctx.beginPath();
                                 ctx.strokeStyle = `rgba(79, 172, 254, ${0.4 * (1 - dist / 150)})`;
@@ -925,10 +950,10 @@
                     }
                     requestAnimationFrame(draw);
                 }
-                
+
                 init();
                 draw();
-                
+
                 window.addEventListener('resize', init);
             }
         });
