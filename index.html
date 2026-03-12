@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anderson Abi-Ache Shoh Chama - Portfolio</title>
+    <!-- Google Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-p0N4F6wS1I4XqZgsW1ZoX5Xz7blC2MOOiFQZdp9D9M945N9mQwXgOpQ+2ydfTZCe80cmdj9pMBG9SE2KNNXw3w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         /* Base reset */
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
             color: #fff;
             line-height: 1.6;
@@ -16,13 +19,17 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            scroll-behavior: smooth;
         }
 
         header {
-            padding: 2rem;
+            padding: 2rem 1rem;
             text-align: center;
             background: rgba(0,0,0,0.3);
             animation: fadeIn 1.5s ease-out;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         header h1 {
@@ -70,6 +77,21 @@
             margin: 0 auto;
             animation: fadeIn 1.5s ease-out;
         }
+        section:nth-of-type(even) {
+            background: rgba(255,255,255,0.05);
+        }
+        .card {
+            background: rgba(255,255,255,0.15);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .card:hover { transform: translateY(-5px) scale(1.02); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
+        nav a { font-weight: 600; }
+        nav a i { margin-right: 5px; }
+        footer { font-size: 0.9rem; }
+
 
         .intro {
             text-align: center;
@@ -87,14 +109,18 @@
             margin-top: 2rem;
         }
 
-        .card {
-            background: rgba(255,255,255,0.1);
-            padding: 1.5rem;
-            border-radius: 8px;
-            transition: transform 0.3s;
-        }
+        /* additional card styling already defined above with shadows */
 
-        .card:hover { transform: translateY(-5px) scale(1.02); }
+        .hero-title {
+            font-size: 2.5rem;
+            animation: fadeIn 1.5s ease-out;
+        }
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.85;
+            margin-bottom: 1rem;
+            animation: fadeIn 2s ease-out;
+        }
 
         footer {
             text-align: center;
@@ -130,29 +156,30 @@
         <p>DevOps Enthusiast | Student at LionTech Canada</p>
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about"><i class="fas fa-user"></i>About</a></li>
+                <li><a href="#skills"><i class="fas fa-toolbox"></i>Skills</a></li>
+                <li><a href="#projects"><i class="fas fa-folder-open"></i>Projects</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i>Contact</a></li>
             </ul>
         </nav>
     </header>
     <section id="about" class="intro">
         <img src="https://via.placeholder.com/150" alt="Profile picture" class="profile-pic">
-        <h2>Hello, I'm Anderson!</h2>
+        <h2 class="hero-title">Hello, I'm Anderson!</h2>
+        <p class="hero-subtitle">A DevOps student specializing in AWS solutions and automation</p>
         <p>Welcome to my professional portfolio. I'm a passionate DevOps student at LionTech Canada with hands-on experience working extensively with <strong>AWS</strong>, including services like S3, EC2, and Amplify. I specialize in infrastructure automation, cloud deployments, and container orchestration. I build tools and workflows that empower teams to ship reliable software faster.</p>
     </section>
 
     <section id="skills">
         <h2>Key Skills</h2>
         <div class="skills">
-            <div class="card"><h3>Infrastructure as Code</h3><p>Terraform, Ansible, ARM Templates</p></div>
-            <div class="card"><h3>AWS Services</h3><p>S3, EC2, Amplify, Lambda, CloudFormation</p></div>
-            <div class="card"><h3>Containerization</h3><p>Docker, Kubernetes, Helm</p></div>
-            <div class="card"><h3>CI/CD</h3><p>GitHub Actions, Jenkins, Azure DevOps</p></div>
-            <div class="card"><h3>Scripting</h3><p>PowerShell, Bash, Python</p></div>
-            <div class="card"><h3>Monitoring & Logging</h3><p>Prometheus, Grafana, ELK Stack</p></div>
-            <div class="card"><h3>Languages</h3><p>English (C1), French (Intermediate)</p></div>
+            <div class="card"><h3><i class="fas fa-code-branch"></i>Infrastructure as Code</h3><p>Terraform, Ansible, ARM Templates</p></div>
+            <div class="card"><h3><i class="fab fa-aws"></i>AWS Services</h3><p>S3, EC2, Amplify, Lambda, CloudFormation</p></div>
+            <div class="card"><h3><i class="fas fa-box"></i>Containerization</h3><p>Docker, Kubernetes, Helm</p></div>
+            <div class="card"><h3><i class="fas fa-play-circle"></i>CI/CD</h3><p>GitHub Actions, Jenkins, Azure DevOps</p></div>
+            <div class="card"><h3><i class="fas fa-terminal"></i>Scripting</h3><p>PowerShell, Bash, Python</p></div>
+            <div class="card"><h3><i class="fas fa-chart-line"></i>Monitoring & Logging</h3><p>Prometheus, Grafana, ELK Stack</p></div>
+            <div class="card"><h3><i class="fas fa-language"></i>Languages</h3><p>English (C1), French (Intermediate)</p></div>
         </div>
     </section>
 
