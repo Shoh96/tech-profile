@@ -42,6 +42,23 @@
             color: var(--text-main);
             overflow-x: hidden;
             line-height: 1.6;
+            animation: bg-color-change 40s infinite;
+        }
+
+        /* 4 colors * 10 seconds each = 40s total animation duration */
+        @keyframes bg-color-change {
+            0%, 25% {
+                background-color: #050505; /* Black/Dark Gray */
+            }
+            25.01%, 50% {
+                background-color: #0a0f1c; /* Very Dark Blue */
+            }
+            50.01%, 75% {
+                background-color: #120a1c; /* Very Dark Purple */
+            }
+            75.01%, 100% {
+                background-color: #051412; /* Very Dark Teal */
+            }
         }
 
         /* Ambient Animated Background */
